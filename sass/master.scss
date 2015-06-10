@@ -7,13 +7,13 @@ body {
     font-family: Colfax;
 }
 
-.datepicker {
+.datePicker {
     width: 17.1875rem;
     height: 17.5625rem;
     border: 1px solid $gray-7;    
 }
 
-.container {
+.datePicker-content {
     width: 15rem;
     margin: 0 auto;
     padding: 1.125rem 0 0.5rem;
@@ -86,13 +86,13 @@ tr {
     right: 0.875rem;
 }
 
-.u-day {
-    .u-date {
+.datePicker-calendar {
+    .datePicker-date {
         color: $gray-6;
     }
 }
 
-.u-date {
+.datePicker-day{
     font-weight: 500;
 }
 
