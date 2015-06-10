@@ -1,0 +1,104 @@
+@import 'colors';
+@import 'utility';
+@import 'text';
+@import 'fonts';
+
+body {
+    font-family: Colfax;
+}
+
+.datepicker {
+    width: 17.1875rem;
+    height: 17.5625rem;
+    border: 1px solid $gray-7;    
+}
+
+.container {
+    width: 15rem;
+    margin: 0 auto;
+    padding: 1.125rem 0 0.5rem;
+}
+
+.month {
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.u-lastRow {
+    width: 6.875rem;
+    justify-content: space-between;
+}
+
+.u-spaceAround {
+    justify-content: space-around;
+}
+
+tr {
+    td {
+        div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.875rem;
+        height: 1.8125rem;
+        }
+    }
+    th {  
+        div {
+            width: 1.875rem;
+            height: 1.25rem;
+        }
+    }
+}
+
+.header {    
+    padding: 0.625rem 1.25rem;
+    margin: 0;
+    color: white;
+    background: $blue-teal-gradient;
+    font-size: 0.875rem;
+    position: relative;
+}
+
+.arrow {
+    color: $gray-6;
+}
+
+.triangle {
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;    
+    border-bottom: 8px solid #1ebba7;
+    position: absolute;
+    top: -6px;
+    left: 8.125rem;
+    z-index: -5;
+}
+
+.arrow-left {
+    position: relative;
+    left: 0.875rem;
+}
+
+.arrow-right {
+    position: relative;
+    right: 0.875rem;
+}
+
+.u-day {
+    .u-date {
+        color: $gray-6;
+    }
+}
+
+.u-date {
+    font-weight: 500;
+}
+
+.active {
+    background: rgb(30, 187, 167);
+   .u-date {
+        color: white;
+   }
+}
