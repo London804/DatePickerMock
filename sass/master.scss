@@ -16,7 +16,7 @@ body {
 .datePicker-content {
     width: 15rem;
     margin: 0 auto;
-    padding: 1.125rem 0 0.5rem;
+    padding: 1.25rem 0 0;
 }
 
 .month {
@@ -40,7 +40,7 @@ tr {
         justify-content: center;
         align-items: center;
         width: 1.875rem;
-        height: 1.8125rem;
+        height: 1.875rem;
         }
     }
     th {  
@@ -62,6 +62,18 @@ tr {
 
 .arrow {
     color: $gray-6;
+}
+
+.border-triangle {
+    width: 0; 
+    height: 0; 
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;    
+    border-bottom: 9px solid $gray-7;
+    position: absolute;
+    top: -6px;
+    left: 8.125rem;
+    z-index: -5;
 }
 
 .triangle {
