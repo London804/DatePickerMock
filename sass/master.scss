@@ -8,6 +8,9 @@
     transform: rotate(-45deg);
 }
 
+//variable
+$headerColor: rgb(30, 187, 167);
+
 body {
     font-family: Colfax;
 }
@@ -60,7 +63,7 @@ tr {
     padding: 0.625rem 1.25rem;
     margin: 0;
     color: white;
-    background: $blue-teal-gradient;
+    background: $blue;
     font-size: 0.875rem;
     position: relative;
     &:before {
@@ -73,14 +76,13 @@ tr {
         height: 9px;
         border: 1px solid $gray-7;
         border-width: 1px 1px 0 0;
-        box-shadow: 1px -1px 2px rgba(0,0,0,.12);
         @include transform;
         top: -5px;
         left: 125px;
         background: rgb(30, 187, 167);
     }
     &:after {
-        border: 6px solid rgb(30, 187, 167);
+        border: 6px solid $blue;
         content: " ";
         left: 124px;
         position: absolute;
@@ -153,9 +155,11 @@ tr {
     font-weight: 500;
 }
 
-.active {
-    background: rgb(30, 187, 167);
-   .u-date {
-        color: white;
-   }
+.datePicker-day {
+    &.is-active {
+         background: rgb(30, 187, 167);
+        .datePicker-day {
+            color: $white;
+        }
+    }
 }
