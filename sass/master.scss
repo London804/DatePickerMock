@@ -69,21 +69,22 @@ tr {
         @include transform;
         content: " ";
         z-index: -100;
-        width: 18px;
-        height: 18px;
-        border: 1px solid rgba(0,0,0,.1);
+        width: 9px;
+        height: 9px;
+        border: 1px solid $gray-7;
         border-width: 1px 1px 0 0;
         box-shadow: 1px -1px 2px rgba(0,0,0,.12);
         @include transform;
         top: -5px;
         left: 125px;
-        background: rgb(30, 187, 167)
+        background: rgb(30, 187, 167);
     }
     &:after {
-        border-bottom-color: $gray-7;
-        border: 13px solid $gray-7;
+        border: 6px solid rgb(30, 187, 167);
         content: " ";
-        bottom: 100%;
+        left: 124px;
+        position: absolute;
+        top: -1px;
     }
 
 }
