@@ -3,6 +3,11 @@
 @import 'text';
 @import 'fonts';
 
+@mixin transform {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
 body {
     font-family: Colfax;
 }
@@ -58,35 +63,74 @@ tr {
     background: $blue-teal-gradient;
     font-size: 0.875rem;
     position: relative;
+    &:before {
+        margin-bottom: -9px;
+        position: absolute;
+        @include transform;
+        content: " ";
+        z-index: -100;
+        width: 18px;
+        height: 18px;
+        border: 1px solid rgba(0,0,0,.1);
+        border-width: 1px 1px 0 0;
+        box-shadow: 1px -1px 2px rgba(0,0,0,.12);
+        @include transform;
+        top: -5px;
+        left: 125px;
+        background: rgb(30, 187, 167)
+    }
+    &:after {
+        border-bottom-color: $gray-7;
+        border: 13px solid $gray-7;
+        content: " ";
+        bottom: 100%;
+    }
+
 }
 
 .arrow {
     color: $gray-6;
 }
 
-.border-triangle {
-    width: 0; 
-    height: 0; 
-    border-left: 9px solid transparent;
-    border-right: 9px solid transparent;    
-    border-bottom: 9px solid $gray-7;
-    position: absolute;
-    top: -6px;
-    left: 8.125rem;
-    z-index: -5;
-}
+// .border-triangle {
+//     width: 0; 
+//     height: 0; 
+//     border-left: 9px solid transparent;
+//     border-right: 9px solid transparent;    
+//     border-bottom: 9px solid $gray-7;
+//     position: absolute;
+//     top: -6px;
+//     left: 8.125rem;
+//     z-index: -5;
+// }
 
-.triangle {
-    width: 0; 
-    height: 0; 
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;    
-    border-bottom: 8px solid #1ebba7;
-    position: absolute;
-    top: -6px;
-    left: 8.125rem;
-    z-index: -5;
-}
+// .triangle {   
+//     width: 18px;
+//     height: 18px;
+//     transform: rotate(-45deg);
+//     position: absolute;
+//     top: -4px;
+//     left: 8.125rem;
+//     background-color: rgb(30, 187, 167);
+//     z-index: -10;
+//     &:before {
+//         margin-bottom: -9px;
+//         @include transform;
+//         content: " ";
+//          z-index: 100;
+//         width: 18px;
+//         height: 18px;
+//         border: 1px solid rgb(30, 187, 167);
+//         border-width: 1px 1px 0 0;
+//         box-shadow: 1px -1px 2px rgba(0,0,0,.12);
+//         @include transform;
+//     }
+//     &:after {
+//         border-bottom-color: $gray-7;
+//         border: 13px solid transparent;
+//         content: " ";
+//     }
+// }
 
 .arrow-left {
     position: relative;
